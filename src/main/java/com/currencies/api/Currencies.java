@@ -11,9 +11,6 @@ import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
-/**
- * Root resource (exposed at "myresource" path)
- */
 @Path(Tags.ROOT_PATH)
 public class Currencies {
 
