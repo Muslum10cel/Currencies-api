@@ -21,6 +21,6 @@ public class Currencies {
     @Path(Tags.TODAY)
     @Produces(MediaType.APPLICATION_JSON)
     public TarihDate getIt() throws JAXBException, MalformedURLException {
-        return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL("http://www.tcmb.gov.tr/kurlar/today.xml"));
+        return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL());
     }
 }
