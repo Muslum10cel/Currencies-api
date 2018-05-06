@@ -18,6 +18,13 @@ public class Currencies {
     @Path(Tags.TODAY)
     @Produces(MediaType.APPLICATION_JSON)
     public TarihDate getCurrencies() throws JAXBException, MalformedURLException {
-        return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL());
+        return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL(""));
+    }
+    
+     @GET
+    @Path(Tags.DAY)
+    @Produces(MediaType.APPLICATION_JSON)
+    public TarihDate getCurrenciesBySpecificDate(@QueryParam(Tags.YEAR_MONTH) String yearMonth, @QueryParam(Tags.DATE) String date) throws JAXBException, MalformedURLException {
+        return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL("" + yearMonth + "/" + date + ".xml"));
     }
 }
