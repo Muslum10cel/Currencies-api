@@ -17,7 +17,7 @@ public class Currencies {
     @GET
     @Path(Tags.TODAY)
     @Produces(MediaType.APPLICATION_JSON)
-    public TarihDate getCurrencies() throws JAXBException, MalformedURLException {
+    public TarihDate getCurrenciesOfToday() throws JAXBException, MalformedURLException {
         return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL(""));
     }
     
