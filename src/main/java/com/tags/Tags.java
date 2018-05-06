@@ -31,4 +31,6 @@ public class Tags {
 
     public static final String ROOT_PATH = "/currencies";
     public static final String TODAY = "/today";
+    public static final String DAY = "/day";
+    public static final String YEAR_MONTH = "yearMonth";
 }
