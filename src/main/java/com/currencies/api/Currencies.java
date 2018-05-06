@@ -21,7 +21,7 @@ public class Currencies {
         return (TarihDate) JAXBContext.newInstance(TarihDate.class).createUnmarshaller().unmarshal(new URL(""));
     }
     
-     @GET
+    @GET
     @Path(Tags.DAY)
     @Produces(MediaType.APPLICATION_JSON)
     public TarihDate getCurrenciesBySpecificDate(@QueryParam(Tags.YEAR_MONTH) String yearMonth, @QueryParam(Tags.DATE) String date) throws JAXBException, MalformedURLException {
